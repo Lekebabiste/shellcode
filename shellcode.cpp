@@ -26,7 +26,8 @@ int main(int argc, char **argv){
 	cout << "Shellcode : " << "\n" ;
 	for(BYTE e : data_file){
 		if ((unsigned int)(e) != 0){
-			cout <<"/x" << hex << (unsigned int)(e);
+			if (to_string((unsigned int)(e)).length() < 2) { cout <<"/x" << 0 << hex << (unsigned int)(e);}
+			else {cout <<"/x" << hex << (unsigned int)(e);}
 		}
 	}
 	cout << "\n";
