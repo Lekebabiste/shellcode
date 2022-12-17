@@ -1,2 +1,8 @@
 # shellcode
-a simple shellcode generator written in C++
+a simple shellcode printer written in C++
+
+To build it run :
+`g++ shellcode.cpp -o shellcode `
+
+usage : 
+`./shellcode file`
